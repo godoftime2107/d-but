@@ -3,11 +3,13 @@ import string
 
 strongpass = []
 
+#import char libraries
 strongpass.append(list(string.ascii_lowercase)[random.randint(0,len(list(string.ascii_lowercase)))-1])
 strongpass.append(list(string.ascii_uppercase)[random.randint(0,len(list(string.ascii_uppercase)))-1])
 strongpass.append(random.randint(0,9))
 strongpass.append(list(string.punctuation)[random.randint(0,len(list(string.punctuation)))-1])
 
+#merge char libraries
 charlist = string.ascii_lowercase + string.ascii_uppercase + string.digits + string.punctuation
 
 for x in range(0,random.randint(4,12)):
@@ -15,8 +17,8 @@ for x in range(0,random.randint(4,12)):
 
 print(*strongpass, sep="")
 
+#check input against parameters  
 flag = False
-count = 0
 while flag != True:
     userpass = input("""Your password must contain at least:
 8 characters
